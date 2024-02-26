@@ -1,0 +1,39 @@
+<!-- // Name: Erin Wiseman
+    // HW3 -- Drawing a Triangle
+    //
+    // Purpose: Draws a triangle based on an input value.
+    //
+    // Certification of Authenticity:
+    // I certify that this program is entirely my own work.
+    //
+    // Input: size value
+    // Output: drawn triangle -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Triangle</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        let msg = " ";
+        let s = prompt("What size of triangle?", 1);
+        let l = s;
+        let h = s;
+        for (h = 0; h < s; h++) {
+            for (l = 0; l <= h; l++) {
+                msg += " *";
+                document.getElementById("demo").innerHTML = msg;
+            }
+            msg += "<br/>"
+        }
+    </script>
+    
+</body>
+</html>

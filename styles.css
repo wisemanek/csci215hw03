@@ -1,0 +1,29 @@
+body {
+    margin:auto;
+    color:white;
+    background-color: black;
+    text-align: center;
+}
+
+a {
+    color: #227799;
+    font-size: 3em;
+    margin-top: 2em;
+}
+
+a:hover {
+    color: (#2e9cb2, #73c1d2);
+    animation-name: color;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes color {
+    0% {color: #2e9cb2};
+    50% {color: #73c1d2};
+    100% {color: #2e9cb2};
+}
+
+nav {
+    height: 50%;
+}

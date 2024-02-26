@@ -1,0 +1,48 @@
+<!-- // Name: Erin Wiseman
+    // HW3 -- Username and Password validation
+    //
+    // Purpose: Validates a username and password with limited attempts
+    //
+    // Certification of Authenticity:
+    // I certify that this program is entirely my own work.
+    //
+    // Input:
+    // Output: -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        let attempts = 3;
+        let msg = "";
+        let info = false;
+        while (info == false && attempts <= 3 && attempts > 0){
+            let login = prompt("Please enter your username.")
+            let password = prompt("Please enter your password.")
+            attempts -= 1;
+            if (login === "csci215" && password === "grace2024") {
+                msg += "Correct login and password."
+                document.getElementById("demo").innerHTML = msg;
+                info = true;
+            }
+            else {
+                alert("Incorrect login and password. You have " + attempts + " attempts left.")
+            }
+            }
+        if (attempts == 0) {
+            msg = "Invalid username and password."
+            document.getElementById("demo").innerHTML = msg;
+        }
+        </script>
+    
+</body>
+</html>

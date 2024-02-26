@@ -1,0 +1,41 @@
+<!-- // Name: Erin Wiseman
+    // HW3 -- Displaying rank 
+    //
+    // Purpose: Displays a rank based on input credit hours
+    //
+    // Certification of Authenticity:
+    // I certify that this program is entirely my own work.
+    //
+    // Input: credit hours
+    // Output: rank -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let credits = prompt("Enter the number of earned credits", 0);
+        var rank;
+
+            if (credits <= 29) {
+            rank = "Freshman";
+            } else if (credits >= 30 && credits <= 59) {
+            rank = "Sophomore";
+            } else if (credits >= 60 && credits <= 89) {
+            rank = "Junior";
+            }
+            else {
+            rank = "Senior";
+            }
+
+        document.write(rank);
+    </script>
+    
+</body>
+</html>

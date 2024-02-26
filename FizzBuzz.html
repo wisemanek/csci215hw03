@@ -1,0 +1,61 @@
+<!-- // Name: Erin Wiseman
+    // HW3 -- Printing
+    //
+    // Purpose: Prints numbers 1 through n (20-50), replacing multiples of 3 with 'Fizz', multiples of 5 with 'Buzz', and multiples of 3 and 5 with "FizzBuzz"
+    //
+    // Certification of Authenticity:
+    // I certify that this program is entirely my own work.
+    //
+    // Input: n, a number between 20 and 50
+    // Output: prints 1 through n, replacing multiples of 3 with 'Fizz', multiples of 5 with 'Buzz', and multiples of 3 and 5 with "FizzBuzz" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>FizzBuzz</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <script>
+        let number = prompt("Enter a number between 20 and 50", 20);
+        let msg = " ";
+        if (number >= 20 && number <= 50) { 
+            for (i = 1; i <= number; i++) {
+                if ((i % 3 == 0) && (i % 5 == 0)) {
+                    msg += " FizzBuzz <br/>";
+                    document.getElementById("demo").innerHTML = msg;
+                
+                }
+                else if (i % 3 == 0) {
+                    msg += " Fizz <br/>";
+                    document.getElementById("demo").innerHTML = msg;
+                
+                } 
+                else if (i % 5 == 0) {
+                    msg += " Buzz <br/>";
+                    document.getElementById("demo").innerHTML = msg;
+                
+            }
+                else { 
+                msg += i + " <br/>";
+                document.getElementById("demo").innerHTML = msg; }
+                }
+            }
+            else {
+                msg = "Invalid number. Please enter a number between 20 and 50."
+                document.getElementById("demo").innerHTML = msg; 
+            }
+            
+        
+        
+            /* document.write("Invalid Number. Try Again.") */ 
+        
+    </script>
+    
+</body>
+</html>

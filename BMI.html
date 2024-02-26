@@ -1,0 +1,80 @@
+<!-- // Name: Erin Wiseman
+    // HW3 -- Calculating BMI
+    //
+    // Purpose: Calculates BMI based on weight, height, and gender.
+    //
+    // Certification of Authenticity:
+    // I certify that this program is entirely my own work.
+    //
+    // Input: weight, height, gender
+    // Output: BMI -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BMI Calculator</title>
+</head>
+<body>
+
+    <!-- <form id="calculator">
+        Enter your gender here (M/F):
+        <input id="gender" value="">
+
+        <br/>
+
+        Enter your weight (in kg) here:
+        <input id="weight" value="">
+
+        <br/>
+
+        Enter your height (in cm) here:
+        <input id="height" value="">
+
+        <br/>
+
+        <input type="button" value="input" onclick="BMI()">
+    </form> -->
+
+    <p id = "demo"></p>
+
+    <script>
+        let gender = prompt("What is your gender? (M/F)");
+        let weight = prompt("What is your weight? (in kg)");
+        let height = prompt("What is your height? (in cm)");
+        weight = parseInt(weight);
+        height = parseInt(height);
+        let msg = " ";
+        let BMI = (weight / height ** 2) * 10000;
+
+        if (BMI <= 25 && gender === "M") {
+            msg = "Your BMI is " + BMI.toFixed(2) + ". Your estimated life expenctancy is 79.4 years.";
+            document.getElementById("demo").innerHTML = msg;
+        }
+
+        else if (BMI <= 25 && gender === "F") {
+            msg = "Your BMI is " + BMI.toFixed(2) + ". Your estimated life expenctancy is 83.5 years.";
+            document.getElementById("demo").innerHTML = msg;
+        }
+
+        else if (BMI >= 25 && gender === "M") {
+            msg = "Your BMI is " + BMI.toFixed(2) + ". Your estimated life expenctancy is 77.3 years.";
+            document.getElementById("demo").innerHTML = msg;
+        }
+
+        else if (BMI >= 25 && gender === "F") {
+            msg = "Your BMI is " + BMI.toFixed(2) + ". Your estimated life expenctancy is 81.4 years.";
+            document.getElementById("demo").innerHTML = msg;
+        }
+
+        else {
+            msg = "Invalid.";
+            document.getElementById("demo").innerHTML = msg;
+        }
+
+    </script>
+    
+</body>
+</html>
